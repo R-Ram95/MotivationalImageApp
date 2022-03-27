@@ -19,7 +19,13 @@ const ImageCard = (props) => {
   return (
     <div className='card'>
       <h1>Step 1: Choose Your Picture</h1>
-      {image && <img src={image}></img>}
+      {image ? (
+        <img src={image}></img>
+      ) : (
+        <div
+          style={{ border: '1px solid black', height: '400px', width: '400px' }}
+        ></div>
+      )}
       {error && <h2>Sorry, failed to get image :( </h2>}
       <button type='button' className='btn' onClick={handleGetImage}>
         Get Image

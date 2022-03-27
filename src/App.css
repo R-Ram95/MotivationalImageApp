@@ -10,16 +10,24 @@
   --border-radius: 1vw;
 }
 
-.header {
-  text-align: center;
-  background-color: var(--clr-secondary);
-  padding: 0.25em;
-  border-radius: var(--border-radius);
-  color: var(--clr-secondary-1);
-  margin-left: var(--margin-left-right);
-  margin-right: var(--margin-left-right);
-  margin-top: var(--margin-top-bottom);
-  margin-bottom: var(--margin-top-bottom);
+.btn {
+  display: inline-block;
+  background-color: var(--clr-secondary-2);
+  color: var(--clr-primary);
+  padding: 0.25rem 0.75rem;
+  border-radius: 10px;
+  border-color: transparent;
+  text-transform: capitalize;
+  font-size: 1rem;
+  margin-top: 2rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.btn:hover {
+  background: var(--clr-secondary-3);
 }
 
 card {
@@ -53,6 +61,23 @@ card {
   height: 100%;
 }
 
+canvas {
+  border: 1px solid var(--clr-primary);
+  border-width: 2px;
+}
+
+.header {
+  text-align: center;
+  background-color: var(--clr-secondary);
+  padding: 0.25em;
+  border-radius: var(--border-radius);
+  color: var(--clr-secondary-1);
+  margin-left: var(--margin-left-right);
+  margin-right: var(--margin-left-right);
+  margin-top: var(--margin-top-bottom);
+  margin-bottom: var(--margin-top-bottom);
+}
+
 h1 {
   color: var(--clr-secondary-1);
 }
@@ -73,26 +98,6 @@ p {
 
 #quote {
   grid-area: quote;
-}
-
-.btn {
-  display: inline-block;
-  background-color: var(--clr-secondary-2);
-  color: var(--clr-primary);
-  padding: 0.25rem 0.75rem;
-  border-radius: 10px;
-  border-color: transparent;
-  text-transform: capitalize;
-  font-size: 1rem;
-  margin-top: 2rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  cursor: pointer;
-  transition: all 0.3s linear;
-}
-
-.btn:hover {
-  background: var(--clr-secondary-3);
 }
 
 /* DYNAMIC SIZING */
