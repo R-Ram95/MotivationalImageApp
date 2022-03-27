@@ -1,38 +1,102 @@
-.App {
+/* VARIABLES - USE MATERIAL DESIGN FOR COLOUR PALLETE*/
+:root {
+  --clr-primary: #262626;
+  --clr-secondary: #555555;
+  --clr-secondary-1: #e9e9e9;
+  --clr-secondary-2: #0099ff;
+  --clr-secondary-3: #9d9d9d;
+  --margin-left-right: 3vw;
+  --margin-top-bottom: 1vw;
+  --border-radius: 1vw;
+}
+
+.header {
   text-align: center;
+  background-color: var(--clr-secondary);
+  padding: 0.25em;
+  border-radius: var(--border-radius);
+  color: var(--clr-secondary-1);
+  margin-left: var(--margin-left-right);
+  margin-right: var(--margin-left-right);
+  margin-top: var(--margin-top-bottom);
+  margin-bottom: var(--margin-top-bottom);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+card {
+  display: flex;
+  background-color: var(--clr-secondary);
+  padding: 1vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 0.5fr;
+  grid-template-areas:
+    'image image-gen'
+    'quote image-gen';
+  height: 100vh;
+  grid-gap: 1rem;
+  margin-left: var(--margin-left-right);
+  margin-right: var(--margin-left-right);
+  margin-top: var(--margin-top-bottom);
+  margin-bottom: var(--margin-top-bottom);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card {
+  background-color: var(--clr-secondary);
+  border-radius: var(--border-radius);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  color: var(--clr-secondary-1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+#image {
+  grid-area: image;
+}
+
+#image-gen {
+  grid-area: image-gen;
+}
+
+#quote {
+  grid-area: quote;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--clr-secondary-2);
+  color: var(--clr-primary);
+  padding: 0.25rem 0.75rem;
+  border-radius: 10px;
+  border-color: transparent;
+  text-transform: capitalize;
+  font-size: 1rem;
+  margin-top: 2rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.btn:hover {
+  background: var(--clr-secondary-3);
+}
+
+/* DYNAMIC SIZING */
+@media only screen and(max-width: 576px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr 1fr;
+    grid-template-areas:
+      'image'
+      'quote'
+      'image-gen';
   }
 }
