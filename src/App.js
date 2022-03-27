@@ -18,10 +18,10 @@ function App() {
           <ImageCard {...{ image, setImage }} />
         </div>
         <div id='image-gen'>
-          <ImageGenCard {...image} />
+          <ImageGenCard {...{ image, quote }} />
         </div>
         <div id='quote'>
-          <QuoteCard />
+          <QuoteCard {...{ quote, setQuote }} />
         </div>
       </div>
     </>
